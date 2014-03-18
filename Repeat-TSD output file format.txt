@@ -1,0 +1,41 @@
+The tool has to process all repeats in input file and output info about TSD around every repeat.
+
+Output file format should be in CSV with ';' (semicolon) as a delimiter.
+The order of the fields should be:
+
+* Sequence name    
+    # chrX
+* Repeat class/family
+    # LINE/L1
+* Repeat name
+    # L1MB2
+* Repeat start position in sequence
+    # 74918
+* Repeat end position in sequence
+    # 74968
+* Strand: '+' - forward strand, 'C' - complement strand
+    # +
+* TSD flag: 1 - repeat has TSD, 0 - no TSD
+    # 1
+If repeat has TSD then additional fields with TSD info must be specified:
+
+* First aligned TSD
+    # TAAAAA_AAAG
+* First TSD start position
+    # 74906
+* Second aligned TSD
+    # TAAAAATAAAG
+* Second TSD start position
+    # 74969
+* TSD length (should be the length of aligned TSDs)
+    # 11
+* Edit distance
+    # 1
+
+    
+Example:
+chrX;LINE/L1;L1MB2;74918;74968;+;1;TAAAAA_AAAG;74906;TAAAAATAAAG;74969;11;1
+
+
+
+    
